@@ -1,0 +1,15 @@
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\bin\x64\Release\net6.0\GeoTopoRAppNcad.deps.json
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\bin\x64\Release\net6.0\GeoTopoRAppNcad.dll
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\bin\x64\Release\net6.0\GeoTopoRAppNcad.pdb
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\GeoTopoRAppNcad.csproj.AssemblyReference.cache
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\Interop.nanoCAD.dll
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\Interop.OdaX.dll
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\GeoTopoRAppNcad.csproj.ResolveComReference.cache
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\GeoTopoRAppNcad.GeneratedMSBuildEditorConfig.editorconfig
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\GeoTopoRAppNcad.AssemblyInfoInputs.cache
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\GeoTopoRAppNcad.AssemblyInfo.cs
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\GeoTopoRAppNcad.csproj.CoreCompileInputs.cache
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\GeoTopoRAppNcad.dll
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\refint\GeoTopoRAppNcad.dll
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\GeoTopoRAppNcad.pdb
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\ref\GeoTopoRAppNcad.dll

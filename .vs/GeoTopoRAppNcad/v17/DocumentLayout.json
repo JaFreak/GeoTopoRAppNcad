@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Csharp\\GeoTopoRApp\\GeoTopoRAppNcad\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE18D69-1FE4-4B00-888B-A33B4820E0D5}|GeoTopoRAppNcad.csproj|d:\\csharp\\geotoporapp\\geotoporappncad\\changedimensiontextnano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE18D69-1FE4-4B00-888B-A33B4820E0D5}|GeoTopoRAppNcad.csproj|solutionrelative:changedimensiontextnano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE18D69-1FE4-4B00-888B-A33B4820E0D5}|GeoTopoRAppNcad.csproj|d:\\csharp\\geotoporapp\\geotoporappncad\\signbuildingsnano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE18D69-1FE4-4B00-888B-A33B4820E0D5}|GeoTopoRAppNcad.csproj|solutionrelative:signbuildingsnano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SignBuildingsNano.cs",
+              "DocumentMoniker": "D:\\Csharp\\GeoTopoRApp\\GeoTopoRAppNcad\\SignBuildingsNano.cs",
+              "RelativeDocumentMoniker": "SignBuildingsNano.cs",
+              "ToolTip": "D:\\Csharp\\GeoTopoRApp\\GeoTopoRAppNcad\\SignBuildingsNano.cs",
+              "RelativeToolTip": "SignBuildingsNano.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAALAAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T18:19:05.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChangeDimensionTextNano.cs",
+              "DocumentMoniker": "D:\\Csharp\\GeoTopoRApp\\GeoTopoRAppNcad\\ChangeDimensionTextNano.cs",
+              "RelativeDocumentMoniker": "ChangeDimensionTextNano.cs",
+              "ToolTip": "D:\\Csharp\\GeoTopoRApp\\GeoTopoRAppNcad\\ChangeDimensionTextNano.cs*",
+              "RelativeToolTip": "ChangeDimensionTextNano.cs*",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBUAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T18:08:19.518Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
