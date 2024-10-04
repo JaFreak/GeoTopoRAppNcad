@@ -13,3 +13,4 @@ D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\GeoTopoRAppNcad.dll
 D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\refint\GeoTopoRAppNcad.dll
 D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\GeoTopoRAppNcad.pdb
 D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\ref\GeoTopoRAppNcad.dll
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Release\net6.0\GeoTopoRAppNcad.sourcelink.json

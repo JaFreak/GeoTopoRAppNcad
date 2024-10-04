@@ -19,8 +19,13 @@ namespace WorkWithDimensions
             filterListForSelectDimensions[0] = new TypedValue(0, "DIMENSION");
             SelectionFilter filterForSelectDimensions = new SelectionFilter(filterListForSelectDimensions);
 
-            PromptResult pref = doc.Editor.GetString("\nВведите префикс");
-            PromptResult suf = doc.Editor.GetString("\nВведите суффикс");
+            PromptStringOptions prefOptions = new PromptStringOptions("\nВведите префикс");
+            prefOptions.AllowSpaces = true;
+            PromptStringOptions sufOptions = new PromptStringOptions("\nВведите суффикс");
+            sufOptions.AllowSpaces = true;
+
+            PromptResult pref = ed.GetString(prefOptions);
+            PromptResult suf = ed.GetString(sufOptions);
 
             // Starts a new transaction with the Transaction Manager
             using (Transaction trans = dB.TransactionManager.StartTransaction())
@@ -50,8 +55,7 @@ namespace WorkWithDimensions
                     }
                     else
                     {
-                        string newPrefix = pref.StringResult + dimensionForEdit.Prefix;
-                        dimensionForEdit.Prefix = newPrefix;
+                        dimensionForEdit.Prefix += pref.StringResult;
                         dimensionForEdit.Suffix += suf.StringResult;
                     }
                 }

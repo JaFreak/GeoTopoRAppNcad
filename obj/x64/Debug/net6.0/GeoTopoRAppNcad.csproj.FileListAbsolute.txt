@@ -9,6 +9,7 @@ D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Debug\net6.0\GeoTopoRAppNcad.Gener
 D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Debug\net6.0\GeoTopoRAppNcad.AssemblyInfoInputs.cache
 D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Debug\net6.0\GeoTopoRAppNcad.AssemblyInfo.cs
 D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Debug\net6.0\GeoTopoRAppNcad.csproj.CoreCompileInputs.cache
+D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Debug\net6.0\GeoTopoRAppNcad.sourcelink.json
 D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Debug\net6.0\GeoTopoRAppNcad.dll
 D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Debug\net6.0\refint\GeoTopoRAppNcad.dll
 D:\Csharp\GeoTopoRApp\GeoTopoRAppNcad\obj\x64\Debug\net6.0\GeoTopoRAppNcad.pdb
