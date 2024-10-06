@@ -2,6 +2,7 @@
 using HostMgd.EditorInput;
 using Teigha.DatabaseServices;
 using Teigha.Geometry;
+using RMMethods;
 
 namespace WorkWithComunications
 {
@@ -14,61 +15,61 @@ namespace WorkWithComunications
         
 
 
-        public double RotateAngleFix(double angle)
-        {
-            double sin = Math.Sin(angle);
-            double cos = Math.Cos(angle);
-            if (sin < 0 && cos > 0)
-                angle += 0;
-            else if (sin > 0 && cos > 0)
-                angle += 0;
-            else if (sin < 0 && cos < 0)
-                angle += Math.PI;
-            else if (sin > 0 && cos < 0)
-                angle -= Math.PI;
-            else if (sin == 0)
-                angle = 0;
-            else
-                angle = 0;
-            return angle;
-        }
+        //public double RotateAngleFix(double angle)
+        //{
+        //    double sin = Math.Sin(angle);
+        //    double cos = Math.Cos(angle);
+        //    if (sin < 0 && cos > 0)
+        //        angle += 0;
+        //    else if (sin > 0 && cos > 0)
+        //        angle += 0;
+        //    else if (sin < 0 && cos < 0)
+        //        angle += Math.PI;
+        //    else if (sin > 0 && cos < 0)
+        //        angle -= Math.PI;
+        //    else if (sin == 0)
+        //        angle = 0;
+        //    else
+        //        angle = 0;
+        //    return angle;
+        //}
 
-        public Polyline CaseAxle() // создаем полилинию из указанных пользователем точек
-        {
-            Polyline сaseAxlePline = new Polyline();
-            while (true)
-            {
-                PromptPointResult giveMePoint = HostMgd.ApplicationServices.Application.DocumentManager.MdiActiveDocument.Editor.GetPoint("\nУкажите точку по оси футляра. Нажмите Esc если достаточно");
-                if (giveMePoint.Status != PromptStatus.OK)
-                    break;
-                else
-                {
-                    Point3d caseAxlePoint3d = giveMePoint.Value;
-                    Point2d caseAxlePoint2d = new Point2d(caseAxlePoint3d.X, caseAxlePoint3d.Y);
-                    сaseAxlePline.AddVertexAt(сaseAxlePline.NumberOfVertices, caseAxlePoint2d, 0, 0, 0);
-                }
-            }
+        //public Polyline AxlePolyline() // создаем полилинию из указанных пользователем точек
+        //{
+        //    Polyline сaseAxlePline = new Polyline();
+        //    while (true)
+        //    {
+        //        PromptPointResult giveMePoint = HostMgd.ApplicationServices.Application.DocumentManager.MdiActiveDocument.Editor.GetPoint("\nУкажите точку по оси футляра. Нажмите Esc если достаточно");
+        //        if (giveMePoint.Status != PromptStatus.OK)
+        //            break;
+        //        else
+        //        {
+        //            Point3d caseAxlePoint3d = giveMePoint.Value;
+        //            Point2d caseAxlePoint2d = new Point2d(caseAxlePoint3d.X, caseAxlePoint3d.Y);
+        //            сaseAxlePline.AddVertexAt(сaseAxlePline.NumberOfVertices, caseAxlePoint2d, 0, 0, 0);
+        //        }
+        //    }
+        //
+        //    return сaseAxlePline;
+        //}
 
-            return сaseAxlePline;
-        }
-
-        public void CalculationAngleAndPointFromSegment2d(LineSegment2d takelineSegment2DHere, double offsetFromSegment, double objectHeight,
-            out double angleBySegment, out Point3d pointInTheMidleOfSegment)      //здесь из сегмента,расстояния от него (в обе стороны) и высоты текста,
-                                                                                  //расчитывается угол поворота объекта вдоль сегмента и координата точки в его середине
-        {
-            Vector2d caseAxleVector2D = (takelineSegment2DHere.StartPoint.GetVectorTo(takelineSegment2DHere.MidPoint));
-            Vector2d caseAxlePerpVector2D = caseAxleVector2D.GetPerpendicularVector().GetNormal();
-            caseAxlePerpVector2D = caseAxlePerpVector2D * ((offsetFromSegment / 2) + objectHeight);
-            Point2d pointForText2D = takelineSegment2DHere.StartPoint + caseAxleVector2D;
-            pointForText2D = pointForText2D + caseAxlePerpVector2D;
-            pointInTheMidleOfSegment = new Point3d(pointForText2D.X, pointForText2D.Y, 0);
-
-            Point3d segmentStartPoint = new Point3d(takelineSegment2DHere.StartPoint.X, takelineSegment2DHere.StartPoint.Y, 0);
-            Point3d segmentEndPoint = new Point3d(takelineSegment2DHere.EndPoint.X, takelineSegment2DHere.EndPoint.Y, 0);
-            Vector3d caseAxleVector3D = segmentStartPoint.GetVectorTo(segmentEndPoint);
-            double angelOfRotation = caseAxleVector3D.GetAngleTo(Vector3d.XAxis, -Vector3d.ZAxis);
-            angleBySegment = RotateAngleFix(angelOfRotation);
-        }
+        //public void CalculationAngleAndPointFromSegment2d(LineSegment2d takelineSegment2DHere, double offsetFromSegment, double objectHeight,
+        //    out double angleBySegment, out Point3d pointInTheMidleOfSegment)      //здесь из сегмента,расстояния от него (в обе стороны) и высоты текста,
+        //                                                                          //расчитывается угол поворота объекта вдоль сегмента и координата точки в его середине
+        //{
+        //    Vector2d caseAxleVector2D = (takelineSegment2DHere.StartPoint.GetVectorTo(takelineSegment2DHere.MidPoint));
+        //    Vector2d caseAxlePerpVector2D = caseAxleVector2D.GetPerpendicularVector().GetNormal();
+        //    caseAxlePerpVector2D = caseAxlePerpVector2D * ((offsetFromSegment / 2) + objectHeight);
+        //    Point2d pointForText2D = takelineSegment2DHere.StartPoint + caseAxleVector2D;
+        //    pointForText2D = pointForText2D + caseAxlePerpVector2D;
+        //    pointInTheMidleOfSegment = new Point3d(pointForText2D.X, pointForText2D.Y, 0);
+        //
+        //    Point3d segmentStartPoint = new Point3d(takelineSegment2DHere.StartPoint.X, takelineSegment2DHere.StartPoint.Y, 0);
+        //    Point3d segmentEndPoint = new Point3d(takelineSegment2DHere.EndPoint.X, takelineSegment2DHere.EndPoint.Y, 0);
+        //    Vector3d caseAxleVector3D = segmentStartPoint.GetVectorTo(segmentEndPoint);
+        //    double angelOfRotation = caseAxleVector3D.GetAngleTo(Vector3d.XAxis, -Vector3d.ZAxis);
+        //    angleBySegment = RM.RotateAngleFix(angelOfRotation);
+        //}
 
         [CommandMethod("CaseCreate")]
         [CommandMethod("СоздатьФутляр")]
@@ -139,7 +140,7 @@ namespace WorkWithComunications
 
                     BlockTableRecord currentSpace2 = trans2.GetObject(doc.Database.CurrentSpaceId, OpenMode.ForWrite) as BlockTableRecord;
                     DBObjectCollection caseCreateCollection = new DBObjectCollection();
-                    Polyline caseAxle = CaseAxle();
+                    Polyline caseAxle = RM.AxlePolyline();
                     if (caseAxle == null)
                         return;
                     else
@@ -223,7 +224,7 @@ namespace WorkWithComunications
                                         caseSpecifications[s].Linetype = caseSpecEx.Linetype;
 
                                         LineSegment2d casePart = caseAxle.GetLineSegment2dAt(s);
-                                        CalculationAngleAndPointFromSegment2d(casePart, caseDiameter, specificationHeight, out double rotatAngle, out Point3d pointForText);
+                                        RM.CalculationAngleAndPointFromSegment2d(casePart, caseDiameter, specificationHeight, out double rotatAngle, out Point3d pointForText);
                                         caseSpecifications[s].Rotation = rotatAngle;
                                         caseSpecifications[s].AlignmentPoint = pointForText;
                                         currentSpace2.AppendEntity(caseSpecifications[s]);
@@ -251,7 +252,7 @@ namespace WorkWithComunications
                                         caseSpecifications[s].Linetype = caseSpecEx.Linetype;
 
                                         LineSegment2d casePart = caseAxle.GetLineSegment2dAt(s);
-                                        CalculationAngleAndPointFromSegment2d(casePart, caseDiameter, specificationHeight, out double rotatAngle, out Point3d pointForText);
+                                        RM.CalculationAngleAndPointFromSegment2d(casePart, caseDiameter, specificationHeight, out double rotatAngle, out Point3d pointForText);
                                         caseSpecifications[s].Location = pointForText;
                                         caseSpecifications[s].Rotation = rotatAngle;
                                         currentSpace2.AppendEntity(caseSpecifications[s]);

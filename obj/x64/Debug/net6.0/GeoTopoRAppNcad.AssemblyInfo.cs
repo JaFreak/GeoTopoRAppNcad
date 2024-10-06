@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GeoTopoRAppNcad")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f062f60bfda6441343792a0312f02f5710b56397")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8fe8734e9011f1519a0aae737e7e94b7059561b")]
 [assembly: System.Reflection.AssemblyProductAttribute("GeoTopoRAppNcad")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GeoTopoRAppNcad")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2,6 +2,7 @@
 using HostMgd.EditorInput;
 using Teigha.DatabaseServices;
 using Teigha.Geometry;
+using RMMethods;
 
 
 namespace WorkWithBuildings
@@ -12,67 +13,67 @@ namespace WorkWithBuildings
         public static PromptEntityResult buildSpecificationExample = null;
         public static PromptEntityResult buildDescriptionExample = null;
         public static PromptEntityResult buildNumberExample = null;
-        public double RotateAngleFix(double angle)
-        {
-            double sin = Math.Sin(angle);
-            double cos = Math.Cos(angle);
-            if (sin < 0 && cos > 0)
-                angle += 0;
-            else if (sin > 0 && cos > 0)
-                angle += 0;
-            else if (sin < 0 && cos < 0)
-                angle += Math.PI;
-            else if (sin > 0 && cos < 0)
-                angle += Math.PI;
-            else if (sin == 0)
-                angle = 0;
-            else
-                angle = 0;
-            return angle;
-        }
+        //public double RotateAngleFix(double angle)
+        //{
+        //    double sin = Math.Sin(angle);
+        //    double cos = Math.Cos(angle);
+        //    if (sin < 0 && cos > 0)
+        //        angle += 0;
+        //    else if (sin > 0 && cos > 0)
+        //        angle += 0;
+        //    else if (sin < 0 && cos < 0)
+        //        angle += Math.PI;
+        //    else if (sin > 0 && cos < 0)
+        //        angle += Math.PI;
+        //    else if (sin == 0)
+        //        angle = 0;
+        //    else
+        //        angle = 0;
+        //    return angle;
+        //}
 
-        public Polyline3d StreetCreate()
-        {
-            Point3dCollection streetPoints = new Point3dCollection();
-            Polyline3d streetPline = new Polyline3d();
-            while (true)
-            {
-                PromptPointResult giveMePoint = HostMgd.ApplicationServices.Application.DocumentManager.MdiActiveDocument.Editor.GetPoint("\nУкажите точку на улице. Нажмите Esc если достаточно");
-                if (giveMePoint.Status != PromptStatus.OK)
-                    break;
-                else
-                {
-                    Point3d streetPoint = giveMePoint.Value;
-                    streetPoints.Add(streetPoint);
-                }
-            }
-            streetPline = new Polyline3d(0, streetPoints, false);
-            return streetPline;
-        }
+        //public Polyline3d Axle3dPolyline()
+        //{
+        //    Point3dCollection streetPoints = new Point3dCollection();
+        //    Polyline3d streetPline = new Polyline3d();
+        //    while (true)
+        //    {
+        //        PromptPointResult giveMePoint = HostMgd.ApplicationServices.Application.DocumentManager.MdiActiveDocument.Editor.GetPoint("\nУкажите точку на улице. Нажмите Esc если достаточно");
+        //        if (giveMePoint.Status != PromptStatus.OK)
+        //            break;
+        //        else
+        //        {
+        //            Point3d streetPoint = giveMePoint.Value;
+        //            streetPoints.Add(streetPoint);
+        //        }
+        //    }
+        //    streetPline = new Polyline3d(0, streetPoints, false);
+        //    return streetPline;
+        //}
 
-        public bool EntitysBoundIntersectCheck(Point3d centreOfEntity, Entity obj1, Entity obj2)
-        {
-            bool intersect = false;
-            if (obj1.Bounds != null)
-            {
-                Point3d boundBoxMinPoint = obj1.Bounds.Value.MinPoint;
-                Point3d boundBoxMaxPoint = obj1.Bounds.Value.MaxPoint;
-                Polyline specBoundBox = new Polyline();
-                specBoundBox.AddVertexAt(0, new Point2d((centreOfEntity.X + boundBoxMinPoint.X), (centreOfEntity.Y + boundBoxMinPoint.Y)), 0, 0, 0);
-                specBoundBox.AddVertexAt(1, new Point2d((centreOfEntity.X + boundBoxMinPoint.X), (centreOfEntity.Y + boundBoxMaxPoint.Y)), 0, 0, 0);
-                specBoundBox.AddVertexAt(2, new Point2d((centreOfEntity.X + boundBoxMaxPoint.X), (centreOfEntity.Y + boundBoxMaxPoint.Y)), 0, 0, 0);
-                specBoundBox.AddVertexAt(3, new Point2d((centreOfEntity.X + boundBoxMaxPoint.X), (centreOfEntity.Y + boundBoxMinPoint.Y)), 0, 0, 0);
-                specBoundBox.Closed = true;
-                specBoundBox.Elevation = 0;
-                Point3dCollection charIntersectContur = new Point3dCollection();
-                specBoundBox.IntersectWith(obj2, Teigha.DatabaseServices.Intersect.OnBothOperands, new Plane(), charIntersectContur, IntPtr.Zero, IntPtr.Zero);
-                if (charIntersectContur.Count > 0)
-                    intersect = true;
-            }
-            else
-                intersect = false;
-            return intersect;
-        }
+        //public bool EntitysBoundIntersectCheck(Point3d centreOfEntity, Entity obj1, Entity obj2)
+        //{
+        //    bool intersect = false;
+        //    if (obj1.Bounds != null)
+        //    {
+        //        Point3d boundBoxMinPoint = obj1.Bounds.Value.MinPoint;
+        //        Point3d boundBoxMaxPoint = obj1.Bounds.Value.MaxPoint;
+        //        Polyline specBoundBox = new Polyline();
+        //        specBoundBox.AddVertexAt(0, new Point2d((centreOfEntity.X + boundBoxMinPoint.X), (centreOfEntity.Y + boundBoxMinPoint.Y)), 0, 0, 0);
+        //        specBoundBox.AddVertexAt(1, new Point2d((centreOfEntity.X + boundBoxMinPoint.X), (centreOfEntity.Y + boundBoxMaxPoint.Y)), 0, 0, 0);
+        //        specBoundBox.AddVertexAt(2, new Point2d((centreOfEntity.X + boundBoxMaxPoint.X), (centreOfEntity.Y + boundBoxMaxPoint.Y)), 0, 0, 0);
+        //        specBoundBox.AddVertexAt(3, new Point2d((centreOfEntity.X + boundBoxMaxPoint.X), (centreOfEntity.Y + boundBoxMinPoint.Y)), 0, 0, 0);
+        //        specBoundBox.Closed = true;
+        //        specBoundBox.Elevation = 0;
+        //        Point3dCollection charIntersectContur = new Point3dCollection();
+        //        specBoundBox.IntersectWith(obj2, Teigha.DatabaseServices.Intersect.OnBothOperands, new Plane(), charIntersectContur, IntPtr.Zero, IntPtr.Zero);
+        //        if (charIntersectContur.Count > 0)
+        //            intersect = true;
+        //    }
+        //    else
+        //        intersect = false;
+        //    return intersect;
+        //}
 
         [CommandMethod("SignBuildings")]
         [CommandMethod("ПодписатьДома")]
@@ -132,7 +133,7 @@ namespace WorkWithBuildings
                     }
                 }
             }
-            Polyline3d street = StreetCreate();
+            Polyline3d street = RM.Axle3dPolyline();
 
             while (true)
             {
@@ -237,7 +238,7 @@ namespace WorkWithBuildings
                             - new Point3d(segmentForRotate.StartPoint.X, segmentForRotate.StartPoint.Y, 0);
 
                         double angelOfRotation = vectorSegmentForRotate.GetAngleTo(Vector3d.XAxis, -Vector3d.ZAxis);
-                        angelOfRotation = RotateAngleFix(angelOfRotation);
+                        angelOfRotation = RM.RotateAngleFix(angelOfRotation);
 
 
                         DBText buildingSpecifications = new DBText();
@@ -310,13 +311,13 @@ namespace WorkWithBuildings
                             if (buildSpecificationExample.ObjectId.ObjectClass.DxfName == "TEXT")
                             {
                                 if (buildingSpecificationsWeight > segmentForRotateLength - 0.5)
-                                    buildingSpecifications.Rotation = RotateAngleFix(angelOfRotation - (Math.PI / 2));
+                                    buildingSpecifications.Rotation = RM.RotateAngleFix(angelOfRotation - (Math.PI / 2));
 
                                 buildingSpecifications.AlignmentPoint = centreOfBuilding;
 
-                                bool specIntersect = EntitysBoundIntersectCheck(centreOfBuilding, buildingSpecifications, buildingPline);
+                                bool specIntersect = RM.EntitysBoundIntersectCheck(centreOfBuilding, buildingSpecifications, buildingPline);
                                 if (specIntersect == true)
-                                    buildingSpecifications.Rotation = RotateAngleFix(angelOfRotation - (Math.PI / 2));
+                                    buildingSpecifications.Rotation = RM.RotateAngleFix(angelOfRotation - (Math.PI / 2));
 
                                 currentSpace.AppendEntity(buildingSpecifications);
                                 trans.AddNewlyCreatedDBObject(buildingSpecifications, true);
@@ -324,13 +325,13 @@ namespace WorkWithBuildings
                             else if (buildSpecificationExample.ObjectId.ObjectClass.DxfName == "MTEXT")
                             {
                                 if (buildingSpecificationsWeight > segmentForRotateLength - 0.5)
-                                    buildingSpecificationsMt.Rotation = RotateAngleFix(angelOfRotation - (Math.PI / 2));
+                                    buildingSpecificationsMt.Rotation = RM.RotateAngleFix(angelOfRotation - (Math.PI / 2));
 
                                 buildingSpecificationsMt.Location = centreOfBuilding;
 
-                                bool specIntersect = EntitysBoundIntersectCheck(centreOfBuilding, buildingSpecificationsMt, buildingPline);
+                                bool specIntersect = RM.EntitysBoundIntersectCheck(centreOfBuilding, buildingSpecificationsMt, buildingPline);
                                 if (specIntersect == true)
-                                    buildingSpecificationsMt.Rotation = RotateAngleFix(angelOfRotation - (Math.PI / 2));
+                                    buildingSpecificationsMt.Rotation = RM.RotateAngleFix(angelOfRotation - (Math.PI / 2));
 
                                 currentSpace.AppendEntity(buildingSpecificationsMt);
                                 trans.AddNewlyCreatedDBObject(buildingSpecificationsMt, true);
@@ -391,7 +392,7 @@ namespace WorkWithBuildings
                             {
                                 if (buildDescriptionWidth > segmentForRotateLength - 1.0)
                                 {
-                                    buildDescription.Rotation = RotateAngleFix(angelOfRotation - (Math.PI / 2));
+                                    buildDescription.Rotation = RM.RotateAngleFix(angelOfRotation - (Math.PI / 2));
                                 }
                                 buildDescription.AlignmentPoint = centreOfBuilding;
                                 currentSpace.AppendEntity(buildDescription);
@@ -401,7 +402,7 @@ namespace WorkWithBuildings
                             {
                                 if (buildDescriptionWidth > segmentForRotateLength - 1.0)
                                 {
-                                    buildDescriptionMt.Rotation = RotateAngleFix(angelOfRotation - (Math.PI / 2));
+                                    buildDescriptionMt.Rotation = RM.RotateAngleFix(angelOfRotation - (Math.PI / 2));
                                 }
                                 buildingSpecificationsMt.Location = centreOfBuilding;
                                 currentSpace.AppendEntity(buildDescriptionMt);
@@ -416,8 +417,8 @@ namespace WorkWithBuildings
                                 }
                                 else
                                 {
-                                    buildDescription.Rotation = RotateAngleFix(angelOfRotation - (Math.PI / 2));
-                                    buildingSpecifications.Rotation = RotateAngleFix(angelOfRotation - (Math.PI / 2));
+                                    buildDescription.Rotation = RM.RotateAngleFix(angelOfRotation - (Math.PI / 2));
+                                    buildingSpecifications.Rotation = RM.RotateAngleFix(angelOfRotation - (Math.PI / 2));
                                     buildingSpecifications.AlignmentPoint = centreOfBuildingSpecificationsOrto;
                                     buildDescription.AlignmentPoint = centreOfBuildDescriptionOrto;
                                 }
@@ -436,8 +437,8 @@ namespace WorkWithBuildings
                                 }
                                 else
                                 {
-                                    buildDescriptionMt.Rotation = RotateAngleFix(angelOfRotation - (Math.PI / 2));
-                                    buildingSpecificationsMt.Rotation = RotateAngleFix(angelOfRotation - (Math.PI / 2));
+                                    buildDescriptionMt.Rotation = RM.RotateAngleFix(angelOfRotation - (Math.PI / 2));
+                                    buildingSpecificationsMt.Rotation = RM.RotateAngleFix(angelOfRotation - (Math.PI / 2));
                                     buildingSpecificationsMt.Location = centreOfBuildingSpecificationsOrto;
                                     buildDescriptionMt.Location = centreOfBuildDescriptionOrto;
                                 }
@@ -456,8 +457,8 @@ namespace WorkWithBuildings
                                 }
                                 else
                                 {
-                                    buildDescriptionMt.Rotation = RotateAngleFix(angelOfRotation - (Math.PI / 2));
-                                    buildingSpecifications.Rotation = RotateAngleFix(angelOfRotation - (Math.PI / 2));
+                                    buildDescriptionMt.Rotation = RM.RotateAngleFix(angelOfRotation - (Math.PI / 2));
+                                    buildingSpecifications.Rotation = RM.RotateAngleFix(angelOfRotation - (Math.PI / 2));
                                     buildingSpecifications.AlignmentPoint = centreOfBuildingSpecificationsOrto;
                                     buildDescriptionMt.Location = centreOfBuildDescriptionOrto;
                                 }
@@ -476,8 +477,8 @@ namespace WorkWithBuildings
                                 }
                                 else
                                 {
-                                    buildDescription.Rotation = RotateAngleFix(angelOfRotation - (Math.PI / 2));
-                                    buildingSpecificationsMt.Rotation = RotateAngleFix(angelOfRotation - (Math.PI / 2));
+                                    buildDescription.Rotation = RM.RotateAngleFix(angelOfRotation - (Math.PI / 2));
+                                    buildingSpecificationsMt.Rotation = RM.RotateAngleFix(angelOfRotation - (Math.PI / 2));
                                     buildingSpecificationsMt.Location = centreOfBuildingSpecificationsOrto;
                                     buildDescription.AlignmentPoint = centreOfBuildDescriptionOrto;
                                 }

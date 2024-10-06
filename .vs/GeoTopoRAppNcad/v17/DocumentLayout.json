@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Csharp\\GeoTopoRApp\\GeoTopoRAppNcad\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7AE18D69-1FE4-4B00-888B-A33B4820E0D5}|GeoTopoRAppNcad.csproj|d:\\csharp\\geotoporapp\\geotoporappncad\\changedimensiontextnano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AE18D69-1FE4-4B00-888B-A33B4820E0D5}|GeoTopoRAppNcad.csproj|solutionrelative:changedimensiontextnano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7AE18D69-1FE4-4B00-888B-A33B4820E0D5}|GeoTopoRAppNcad.csproj|d:\\csharp\\geotoporapp\\geotoporappncad\\communicationcase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7AE18D69-1FE4-4B00-888B-A33B4820E0D5}|GeoTopoRAppNcad.csproj|solutionrelative:communicationcase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7AE18D69-1FE4-4B00-888B-A33B4820E0D5}|GeoTopoRAppNcad.csproj|d:\\csharp\\geotoporapp\\geotoporappncad\\changedimensiontextnano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE18D69-1FE4-4B00-888B-A33B4820E0D5}|GeoTopoRAppNcad.csproj|solutionrelative:changedimensiontextnano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7AE18D69-1FE4-4B00-888B-A33B4820E0D5}|GeoTopoRAppNcad.csproj|d:\\csharp\\geotoporapp\\geotoporappncad\\signbuildingsnano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7AE18D69-1FE4-4B00-888B-A33B4820E0D5}|GeoTopoRAppNcad.csproj|solutionrelative:signbuildingsnano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE18D69-1FE4-4B00-888B-A33B4820E0D5}|GeoTopoRAppNcad.csproj|d:\\csharp\\geotoporapp\\geotoporappncad\\rmmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE18D69-1FE4-4B00-888B-A33B4820E0D5}|GeoTopoRAppNcad.csproj|solutionrelative:rmmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,15 +38,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "RMMethods.cs",
+              "DocumentMoniker": "D:\\Csharp\\GeoTopoRApp\\GeoTopoRAppNcad\\RMMethods.cs",
+              "RelativeDocumentMoniker": "RMMethods.cs",
+              "ToolTip": "D:\\Csharp\\GeoTopoRApp\\GeoTopoRAppNcad\\RMMethods.cs",
+              "RelativeToolTip": "RMMethods.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwB0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T10:54:31.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "CommunicationCase.cs",
               "DocumentMoniker": "D:\\Csharp\\GeoTopoRApp\\GeoTopoRAppNcad\\CommunicationCase.cs",
               "RelativeDocumentMoniker": "CommunicationCase.cs",
               "ToolTip": "D:\\Csharp\\GeoTopoRApp\\GeoTopoRAppNcad\\CommunicationCase.cs",
               "RelativeToolTip": "CommunicationCase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFYAAAAQAAAA",
+              "ViewState": "AQIAAOMAAAAAAAAAAAASwPUAAABjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T19:51:56.028Z"
+              "WhenOpened": "2024-10-03T19:51:56.028Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -52,13 +70,14 @@
               "RelativeDocumentMoniker": "SignBuildingsNano.cs",
               "ToolTip": "D:\\Csharp\\GeoTopoRApp\\GeoTopoRAppNcad\\SignBuildingsNano.cs",
               "RelativeToolTip": "SignBuildingsNano.cs",
-              "ViewState": "AQIAAIgAAAAAAAAAAAAkwJcAAABrAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAOABAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T18:19:05.653Z"
+              "WhenOpened": "2024-09-14T18:19:05.653Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ChangeDimensionTextNano.cs",
               "DocumentMoniker": "D:\\Csharp\\GeoTopoRApp\\GeoTopoRAppNcad\\ChangeDimensionTextNano.cs",
               "RelativeDocumentMoniker": "ChangeDimensionTextNano.cs",
